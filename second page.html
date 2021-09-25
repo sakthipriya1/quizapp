@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="secondpage.css">
+</head>
+<body>
+    <div class="second">
+    <h2>REGISTER</h2>
+    <form>
+    <input type="text" class="name" placeholder="Name"><br>
+    <input type="email" class="email" placeholder="Your email"><br>
+    <input type="password" class="pass" placeholder="Password"><br>
+    <input type="submit" class="submit" placeholder="Submit"><br>
+    
+</form>
+    </div>
+    <script>
+        var e=document.getElementsByClassName('submit')[0];
+        e.addEventListener('click',function(event){
+         var a=document.getElementsByClassName('name')[0];
+         localStorage.setItem('textvalue',JSON.stringify(a.value));
+         var b=document.getElementsByClassName('email')[0];
+         var c=document.getElementsByClassName('pass')[0];
+         localStorage.setItem('password',JSON.stringify(c.value));
+         var password=document.getElementsByClassName("pw")[0];
+        if(a.value=="" || b.value==""|| c.value==""){
+            alert("enter all the values");
+            event.preventDefault();
+              }
+            //   if(b.value!="" ){
+            //       alert("Enter the email correctly");
+            //       event.preventDefault();}
+            if(c.value.length<=8){
+                      alert("Password is too short");
+                  }
+                  
+                  
+});
+
+ </script>
+    
+</body>
+</html>

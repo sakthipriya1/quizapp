@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="form.css">
+    </head>
+<body>
+   <div class="form">
+      <form>
+      <h2> QUIZ QUESTIONS</h2>
+      <input type="email" class="inputbox" placeholder="Your email">
+      <input type="password" class="inputbox1" placeholder="Your password"><br>
+
+      <a href="test.html">
+      <button type="button" class="log">Login</button>
+    </a>
+      <hr>
+      <p>Create an account</p>
+      <a href="second page.html">
+       <button type="button" class="sign">Signup</button>
+       </a>
+    </form>
+  </div>
+  <script>
+     
+      var l=document.getElementsByClassName('log')[0];
+      e.addEventListener('click',function(event)
+      {
+        var e=document.getElementsByClassName('inputbox')[0];
+        var p=document.getElementsByClassName('inputbox1')[0];
+        
+        if(e.value==""|| p.value==""){
+          alert("enter email and password to login");
+          event.preventdefault();
+        }
+      });
+      
+  </script>
+    
+</body>
+</html>
